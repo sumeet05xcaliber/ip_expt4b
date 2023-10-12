@@ -71,33 +71,28 @@
     </center>
 
     <script>
-      // Define the Person class
       class Person {
         constructor(name, age) {
           this.name = name;
           this.age = age;
         }
 
-        // Regular member function
         introduce() {
           return `Hi, I'm ${this.name} and I'm ${this.age} years old.`;
         }
 
-        // Arrow function as a member function
         displayDetails = () => {
           const outputElement = document.getElementById("output-container");
           outputElement.innerHTML = `<p>${this.introduce()}</p>`;
         };
       }
 
-      // Define the Student class by inheriting from Person
       class Student extends Person {
         constructor(name, age, rollNo) {
           super(name, age);
           this.rollNo = rollNo;
         }
 
-        // Override the introduce method
         introduce() {
           return `Hi, I'm ${this.name}, age ${this.age} a student with roll number ${this.rollNo}.`;
         }
